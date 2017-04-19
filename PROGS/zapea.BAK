@@ -1,0 +1,73 @@
+close all
+CLEAR ALL
+OPEN DATABASE mycdata
+*DISPLAY DATABASE
+
+SET EXCLUSIVE ON 
+
+*close data
+USE mycdata!libro_ch EXCLUSIVE
+zap
+USE mycdata!movbanco EXCLUSIVE
+ZAP
+USE mycdata!cab_entrada EXCLUSIVE
+ZAP
+USE mycdata!cab_opago EXCLUSIVE
+ZAP
+USE mycdata!cab_recibo EXCLUSIVE
+ZAP
+USE mycdata!caja EXCLUSIVE
+ZAP
+USE mycdata!cta_cte_cliente EXCLUSIVE
+ZAP
+USE mycdata!cta_cte_prove EXCLUSIVE
+ZAP
+USE mycdata!dif_stock EXCLUSIVE
+ZAP
+USE mycdata!facturas EXCLUSIVE
+ZAP
+USE mycdata!item_entrada EXCLUSIVE
+ZAP
+USE mycdata!ctasbanco EXCLUSIVE
+ZAP
+USE mycdata!item_factura EXCLUSIVE
+ZAP
+USE mycdata!item_opago EXCLUSIVE
+ZAP
+USE mycdata!item_recibo EXCLUSIVE
+ZAP
+USE mycdata!maeart EXCLUSIVE
+ZAP
+USE mycdata!maecli EXCLUSIVE
+ZAP
+USE mycdata!maeexpre EXCLUSIVE
+ZAP
+*USE mycdata!maegastos EXCLUSIVE
+ZAP
+*USE mycdata!maelinea EXCLUSIVE
+ZAP
+*USE mycdata!maeprove EXCLUSIVE
+ZAP
+*USE mycdata!maetipo EXCLUSIVE
+ZAP
+USE mycdata!maevendedor EXCLUSIVE
+ZAP
+USE mycdata!maezona EXCLUSIVE
+ZAP
+USE mycdata!movgastos EXCLUSIVE
+ZAP
+USE mycdata!stock_ini EXCLUSIVE
+ZAP
+
+
+CANCEL
+
+USE c:\myc_piletas\tablas_myc\para EXCLUSIVE
+replace para.codcuenta WITH "1"
+replace para.cod_ch WITH "1"
+replace para.codtipo WITH "1"
+replace para.codlinea WITH "1"
+replace para.norden WITH 1
+close data
+
+SET EXCLUSIVE OFF 
